@@ -70,4 +70,4 @@ sudo apt-get install -y libx11-6:i386
 sudo apt-get install -y libxext6:i386
 sudo apt-get install -y msttcorefonts
 
-sudo sh -c "cd $install_dir ; ./install.com +src $download_dir option +type linux212_64"
+sudo sh -c "cd $install_dir ; ./install.com +src $download_dir option +type linux235_64"
