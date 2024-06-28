@@ -22,7 +22,7 @@ user@ubuntu:~$ sh nmrpipe-ubuntu-install.sh
 ## Usage
 
 ```ShellSession
-user@ubuntu:~$ csh
+user@ubuntu:~$ tcsh
 % nmrDraw 
 
 ```
