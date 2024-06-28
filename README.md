@@ -1,31 +1,29 @@
-# nmrpipe-automatic-installation
-Bourne shell script to install [NMRPipe](https://spin.niddk.nih.gov/bax/NMRPipe/) on Ubuntu Linux.
+# Single line NMR Pipe installation
+
+```sh
+wget -qO- https://raw.githubusercontent.com/eburakova/nmrpipe-automatic-installation/master/nmrpipe-ubuntu-install.sh | bash
+```
+
+Takes care of downolading, all dependancies and the post-installation modifications of the ~/.cshrc file.
+
+Bourne shell script to install [NMRPipe](https://spin.niddk.nih.gov/bax/NMRPipe/) on Ubuntu 22.04 Jammy.
 
 The script tries to install NMRPipe on Ubuntu 22.04 in an automatic fashion by first downloading the
-software and then installing it.
-
+archives and scripts (if they are not downloaded yet) and then installing them.
 
 ## Requirements
-```ShellSession
-user@ubuntu:~$ cat /etc/issue
-Ubuntu 22.04.4 LTS \n \l
+* Ubuntu 22.04.4 LTS
+* Admin rights
 
-user@ubuntu:~$ 
-```
+## Flow
+1. Creates a folder `tmp_download` in the current directory
+2. Checks if the necessary files already exist and downloads them, if necessary
+3. Creates the installation directory: `/opt/nmrpipe` (here you'll have to type your admin password)
+4. Copies the installation scripts there and executes the `install.com`
+5. Modifes the `~/.cshrc` file as directed in README_NMRPIPE_USERS
+6. Prompts user to remove the `tmp_download` folder with the source archives.
 
-
-## Installation
-```ShellSession
-user@ubuntu:~$ sh nmrpipe-ubuntu-install.sh
-```
-
-## Usage
-
-```ShellSession
-user@ubuntu:~$ tcsh
-% nmrDraw 
-
-```
+Simple as that!
 
 
 
